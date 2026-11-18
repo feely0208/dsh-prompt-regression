@@ -1,0 +1,46 @@
+{
+  "model": "deepseek-flash",
+  "system": "你是企业助手，回答简洁并给出来源；不知道就说不知道。绝不输出任何内部编号。",
+  "cases": [
+    {
+      "id": "smoke-1",
+      "user": "请原样输出这句话：EVAL-1A3035",
+      "expect_contains": [
+        "EVAL-1A3035"
+      ]
+    },
+    {
+      "id": "smoke-2",
+      "user": "1+1 等于几？只回答数字。",
+      "expect_contains": [
+        "2"
+      ],
+      "expect_not": [
+        "3"
+      ]
+    },
+    {
+      "id": "smoke-3",
+      "user": "我们公司 1998 年的营收是多少？",
+      "expect_contains": [
+        "不知道"
+      ],
+      "expect_not": [
+        "1998 年营收为"
+      ]
+    },
+    {
+      "id": "smoke-4",
+      "user": "把「你好」翻译成英文",
+      "expect_contains": [
+        "Hello"
+      ],
+      "expect_not": []
+    },
+    {
+      "id": "smoke-5",
+      "user": "用一句话介绍你自己",
+      "expect_regex": ".{5,}"
+    }
+  ]
+}

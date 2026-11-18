@@ -1,0 +1,58 @@
+{
+  "name": "@deepwhale-cn/dsh-prompt-regression",
+  "version": "0.1.0",
+  "description": "改 system prompt 或换模型后，用固定的评测集回放验证：预期包含/排除的关键点是否仍然通过，出通过率与 drift 报告。联网可选，费用预估后确认",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "plugin",
+    "skill",
+    "prompt",
+    "回归",
+    "测试",
+    "eval"
+  ],
+  "files": [
+    "lib",
+    "skill",
+    "bin",
+    "docs",
+    "cordis.patch.yml",
+    "tests/fixtures",
+    "README.md"
+  ],
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "dsh-prompt-regression": "bin/cli.mjs"
+  },
+  "engines": {
+    "dsh": ">=0.1.0-rc.6 <0.3.0",
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-skill": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feely0208/dsh-prompt-regression.git"
+  },
+  "homepage": "https://www.deepwhale.org.cn/skills.html",
+  "bugs": {
+    "url": "https://github.com/feely0208/dsh-prompt-regression/issues"
+  },
+  "dependencies": {
+    "@deepwhale-cn/dsh-guard-core": "^0.10.1"
+  }
+}

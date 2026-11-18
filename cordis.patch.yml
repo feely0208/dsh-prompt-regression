@@ -1,0 +1,4 @@
+# @deepwhale-cn/dsh-prompt-regression 的组合层
+- insert:
+    - id: prompt-regression
+      name: '@deepwhale-cn/dsh-prompt-regression'
