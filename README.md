@@ -9,3 +9,11 @@ npx @deepwhale-cn/dsh-prompt-regression run --eval 评测集.json --baseline ./r
 ```
 
 **联网插件**：回放调 chat/completions，费用预估后 --confirm 才执行。断言为子串/正则启发式。
+
+## 安装（DSH）
+
+```bash
+dsh plugin --profile web add @deepwhale-cn/dsh-prompt-regression
+```
+
+也可以 `npm i @deepwhale-cn/dsh-prompt-regression`，或从本仓库直接 `dsh plugin install ./`。
